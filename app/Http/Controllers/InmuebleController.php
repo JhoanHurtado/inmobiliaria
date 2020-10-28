@@ -145,10 +145,10 @@ class InmuebleController extends Controller
                 Storage::disk('local')->put($nombre2,  File::get($image2));
             }
             if ($request->file('image3') != null) {
-                $image3 = $request->file('image3');
-                $nombre3 = $imagen->getClientOriginalName();
+                $imagen3 = $request->file('image3');
+                $nombre3 = $imagen3->getClientOriginalName();
                 $inmueble->image3 = $nombre3;
-                Storage::disk('local')->put($nombre3,  File::get($image3));
+                Storage::disk('local')->put($nombre3,  File::get($imagen3));
             }
             $inmueble->save();
             return redirect('/inmuebles')->with(['message' => 'Actualizacion de inmueble exitosa']);

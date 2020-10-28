@@ -98,7 +98,7 @@
         </div>
 
         <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group ">
                 <label for="departamento">departamento</label>
                 <select id="departamento" class="form-control" name="departamento">
                     <option selected>valle del cauca</option>
@@ -107,14 +107,31 @@
                 <span class="text-danger"> {{ $message }}</span>
                 @enderror
             </div>
-            <div class="form-group col-md-4">
-                <label for="image">Subir imagenes</label>
-                <input type="file" class="form-control-file" id="image" name="image">
-                @error('image')
-                <span class="text-danger"> {{ $message }}</span>
-                @enderror
-            </div>
         </div>
+        <div class="form-row">
+
+<div class="form-group col-md-6">
+    <label for="image">Subir imagenes</label>
+    <input type="file" class="form-control-file" id="image" name="image">
+    @error('image')
+    <span class="text-danger"> {{ $message }}</span>
+    @enderror
+</div>
+<div class="form-group col-md-6">
+    <label for="image2">Subir imagenes</label>
+    <input type="file" class="form-control-file" id="image2" name="image2">
+    @error('image')
+    <span class="text-danger"> {{ $message }}</span>
+    @enderror
+</div>
+<div class="form-group col-md-6">
+    <label for="image3">Subir imagenes</label>
+    <input type="file" class="form-control-file" id="image3" name="image3">
+    @error('image')
+    <span class="text-danger"> {{ $message }}</span>
+    @enderror
+</div>
+</div>
         <!-- <div class="form-group">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="gridCheck" name="termino">
@@ -126,7 +143,7 @@
                 @enderror
             </div>
         </div> -->
-        <button type="submit" class="btn btn-primary">Registrar</button>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
     </form>
 </div>
 <div class="card mb-4">
