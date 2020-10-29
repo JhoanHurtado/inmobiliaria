@@ -34,7 +34,6 @@ class ClientController extends Controller
     }
 
     public function contact(Request $request){
-        // dd($request->all());
         $subject = "SOLICITUD DE CONTACTO";
         $for = "jhoanehr@gmail.com";
         Mail::send('mails.emergency_call',$request->all(), function($msj) use($subject,$for){
