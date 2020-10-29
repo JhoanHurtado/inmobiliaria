@@ -102,14 +102,15 @@
                                 <option>...</option>
                             </select>
                         </div> -->
-                    <form action="{{ url('portafolio/find') }}" method="GET">
-                        <div class=" col-md-4">
-                            <label for="habitaciones"> Habitaciones</label>
-                            <input type="number" class="form-control" id="habitaciones" placeholder="buscar por habitaciones..." name="habitaciones">
-                        </div>
+                        <center>
+                    <form action="{{ url('portafolio/find') }}" method="GET" >
+                        <div  class=" col-md-4">
+                            <label for="nombre"> Encuentra tu  Inmueble </label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Buscar  apartamento..." name="nombre">
+                        </div> <br>
                         <input type="submit" value="Buscar">
                     </form>
-
+                    </center>
                 </div>
 
                 </p>
@@ -195,9 +196,9 @@
                                 <div class="col-sm-12">
                                     <div class="float-right" style="margin-bottom: 10px;">
                                         <p style="font-size:18px">Contacte a nuestro asesor</p>
-                                        <p style="font-size:16px; text-align: right;"> {{$inmueble->inmobiliaria->nombre_empresa}}</p>
+                                        <p style="font-size:16px; text-align: right;"> {{$inmueble->inmobiliaria->cliente->usuario->nombre}}</p>
                                         <p style="font-size:16px; text-align: right;">
-                                            <img src="assets/img/LOGO/Whatsapp.png" height="28px" alt=""> {{$inmueble->inmobiliaria->telefono}}</p>
+                                            <img src="assets/img/LOGO/Whatsapp.png" height="28px" alt=""> {{$inmueble->inmobiliaria->cliente->telefono}}</p>
                                     </div>
                                 </div>
                             </div>

@@ -23,6 +23,7 @@ Route::get( '/login', function () {
 Route::get( '/', 'ClientController@index' );
 Route::get( '/portafolio', 'ClientController@portafolio' );
 Route::get( '/portafolio/find', 'ClientController@find' );
+Route::post('/contactar', 'ClientController@contact')->name('contact');
 
 Route::get( '/home', 'MasterController@index' )->name( 'home' );
 Route::get( '/clientes', 'ClienteController@index' );

@@ -18,4 +18,9 @@ class Inmobiliaria extends Model
         'codigo_postal',
         'imagen',
     ];
+
+    public function cliente()
+    {
+        return $this->belongsTo('App\Cliente', 'cliente_id');
+    }
 }
